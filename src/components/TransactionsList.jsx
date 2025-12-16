@@ -1,10 +1,14 @@
 import React from "react";
 import Transaction from "./Transaction";
 
-function TransactionsList({transactions}) {
-  const transactionComponent = transactions.map((transaction)=>{
-    return <Transaction key={transaction.id} transaction={transaction}/>
+function TransactionsList({ transactions }) {
+  console.log("transactions data:", transactions)
+  if (!Array.isArray(transactions)) return null
+
+  const transactionComponent = transactions.map((transaction) => {
+    return <Transaction key={transaction.id} transaction={transaction} />
   })
+
   return (
     <table className="ui celled striped padded table">
       <tbody>
