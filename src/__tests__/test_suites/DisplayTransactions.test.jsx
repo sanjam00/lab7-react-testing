@@ -4,7 +4,7 @@ import App from '../../components/App'
 import '@testing-library/jest-dom'
 
 describe('Our test will', () => {
-  test('transactions are displayed on startup', async () => {
+  test('ensure transactions are displayed on startup', async () => {
     // expect(true).toBe(false)
 
     //transactions rendered matches in number to users in fetch response

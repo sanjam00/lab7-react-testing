@@ -1,5 +1,6 @@
-// import { test } from 'vitest'
+import { test } from 'vitest'
 
-// test('placeholder', () => {
-// 	// placeholder test to satisfy test runner
-// })
+test('placeholder', () => {
+  // simple placeholder so this file contains at least one test
+  expect(true).toBe(true)
+})

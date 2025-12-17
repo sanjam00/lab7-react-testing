@@ -24,7 +24,9 @@ function AccountContainer() {
       body: JSON.stringify(newTransaction)
     })
       .then(r => r.json())
-      .then(data => setTransactions([...transactions, data]))
+      // .then(data => setTransactions([...transactions, data]))
+      .then(data => setTransactions(prev => [...prev, data]))
+
   }
 
   // Sort function here

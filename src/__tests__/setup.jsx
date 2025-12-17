@@ -3,7 +3,6 @@ import { cleanup } from '@testing-library/react'
 import '@testing-library/jest-dom/vitest'
 import fetch from 'node-fetch';
 
-// global.fetch = fetch
 global.fetch = vi.fn()
 
 // Provide a default set of transactions for tests to use
@@ -95,7 +94,7 @@ global.baseTransactions = [
 ]
 
 global.setFetchResponse = (data) => {
-	global.fetch.mockResolvedValue({
+	global.fetch.mockResolvedValueOnce({
 		ok: true,
 		status: 200,
 		json: async () => data

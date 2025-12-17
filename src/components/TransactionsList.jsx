@@ -2,7 +2,7 @@ import React from "react";
 import Transaction from "./Transaction";
 
 function TransactionsList({ transactions }) {
-  console.log("transactions data:", transactions)
+  // console.log("transactions data:", transactions)
   if (!Array.isArray(transactions)) return null
 
   const transactionComponent = transactions.map((transaction) => {
